@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto";
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.center {
+  margin: auto;
+  padding: 0 2%;
+  max-width: 1280px;
+  width: 100%;
+}
+
+.grid {
+  display: grid;
+  justify-content: space-between;
+}
+
+header {
+  padding: 10px 0;
+  & .center {
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    & i{
+        font-size: 23px;
+    }
+    & .content_menu {
+      
+      & .fa-bars {
+        cursor: pointer;
+        padding-right: 8px;
+      }
+
+      & .fa-youtube {
+        color: #ff0000;
+    
+      }
+    }
+
+    & .content_search {
+      text-align: center;
+
+      & input {
+        border: 1px solid #dad9d9;
+        border-radius: 20px 0px 0px 20px;
+        border-right: none;
+        outline: none;
+        padding: 5px 8px;
+    
+      }
+
+      & i{
+        border: 1px solid #dad9d9;
+        border-radius: 0 20px 20px 0;
+        font-size: 15px;
+        cursor: pointer;
+        padding: 4px 15px;
+        padding-bottom: 6px;
+        margin-left: -5px;
+      }
+    }
+
+    & .content_user {
+        text-align: right;
+        width: 100%;
+      & .user{
+        border: 1px solid #dad9d9;
+        border-radius: 25px;
+        color: #065fd4;
+        display: inline-block;
+        padding: 4px 10px;
+        
+        & i{
+            font-size: 15px;
+        }
+        
+        & a{
+            text-decoration: none;
+            color: #065fd4;
+            font-size: 13px;
+        }
+      }
+    }
+  }
+}
+
+
+main{
+    height: calc(100% - 50px);
+    padding-top: 15px;
+    & .center{
+        height: 100%;
+        display: grid;
+        grid-template-columns: 0.2fr 1fr;
+        & aside{
+            
+            & ul{
+                border-bottom: 1px solid #dad9d9;
+                padding: 15px 0 ;
+                & li{
+                    padding: 12px 0;
+                    list-style: none;
+
+                    & a{
+                        color: #000000;
+                        text-decoration: none;
+                        
+                        & i{
+                            padding-right: 8px;
+                        }
+                    }
+                }
+            }
+        }
+
+        & .list{
+            & .grid{
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr;
+                height: 100%;
+                align-items: center;
+                justify-content: center;
+
+                & .item_grid{
+                    
+                }
+            }
+        }
+    }
+}
